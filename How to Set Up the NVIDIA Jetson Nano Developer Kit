@@ -1,0 +1,17 @@
+You Will Need:
+  1. NVIDIA Jetson Nano Developer Kit (4GB – B01)
+  2. 128GB MicroSD Card with Adapter
+  3. SD/Micro SD Card Reader with Standard USB Connector
+  4. USB to Micro-USB cable
+  5. Power Supply Applicable for Jetson Nano 5V/4A OD 5.5mm ID 2.1mm  
+  6. 2.54mm Standard Computer Jumper Caps 
+  7. USB WiFi Adapter
+  8. NVIDIA Jetson Cooling Fan and Case (Optional)
+  9. USB keyboard
+  10. USB mouse
+  11. Computer monitor with an HDMI connection
+
+Write the Operating System Image to the microSD Card:
+Download the Jetson Nano Developer Kit SD card image file (often called “JetPack”) to your PC. 
+https://developer.nvidia.com/jetson-nano-sd-card-image
+
