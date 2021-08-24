@@ -73,9 +73,11 @@ Set Up the VNC Server:
   Click Save at the bottom right of the box, and then close the app.
   Next, we need to disable encryption of the VNC connection to get things working. To do this, open the terminal and enter the following commands
       gsettings set org.gnome.Vino require-encryption false
-      gsettings set org.gnome.Vino prompt-enabled false
-   
-  
-  
+      gsettings set org.gnome.Vino prompt-enabled false  
 
-  
+Boot Jetson Nano from External Harddisk:
+  1. https://github.com/jetsonhacks/bootFromUSB
+  2. Prepare the USB Drive by formatting the disk as GPT with an Ext4 partition.
+  3. Copy the rootfs to the USB drive. 
+      ./copyRootToUSB.sh -v [HDD/SSD Name]
+  4. Modify extlinux.conf for the boot sequence.
