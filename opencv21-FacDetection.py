@@ -7,7 +7,8 @@ cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
 
-face_cascade = cv2.CascadeClassifier('/home/jay/Desktop/pythonProject/cascade/face.xml')
+face_cascade = cv2.CascadeClassifier(
+    '/home/jay/Desktop/pythonProject/cascade/face.xml')
 
 # myKit.servo[0].angle = 90
 # myKit.servo[1].angle = 10
