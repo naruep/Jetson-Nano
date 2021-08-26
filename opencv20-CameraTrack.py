@@ -122,8 +122,8 @@ while True:
             kit.servo[1].angle = tilt
             break
 
-    cv2.imshow('nanoCam', frame)
-    cv2.moveWindow('nanoCam', 0, 0)
+    cv2.imshow('WebCam', frame)
+    cv2.moveWindow('WebCam', 0, 0)
 
     k = cv2.waitKey(1) & 0xFF
     if (k == 27):
