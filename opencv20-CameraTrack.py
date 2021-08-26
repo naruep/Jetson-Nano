@@ -47,14 +47,16 @@ cv2.createTrackbar('valHigh', 'Trackbars', 255, 255, nothing)
 # Or, if you have a WEB cam, uncomment the next line
 # (If it does not work, try setting to '1' instead of '0')
 
-cam = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
+# cap.set(3, 1280)
+# cap.set(4, 720)
 
-width = cam.get(cv2.CAP_PROP_FRAME_WIDTH)
-height = cam.get(cv2.CAP_PROP_FRAME_HEIGHT)
+width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 print('width:', width, 'height', height)
 
 while True:
-    ret, frame = cam.read()
+    ret, frame = cap.read()
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     frame = cv2.flip(frame, 2)
@@ -123,7 +125,10 @@ while True:
     cv2.imshow('nanoCam', frame)
     cv2.moveWindow('nanoCam', 0, 0)
 
-    if cv2.waitKey(1) == ord('q'):
+    k = cv2.waitKey(1) & 0xFF
+    if (k == 27):
         break
-cam.release()
+
+cv2.moveWindow('WebCam', 0, 0)
+cap.release()
 cv2.destroyAllWindows()
